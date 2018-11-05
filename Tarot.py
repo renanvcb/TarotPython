@@ -16,4 +16,7 @@ spread["present"] = tarot.pop(random.randint(1, 22))
 spread["future"] = tarot.pop(random.randint(1, 22))
 
 for key, value in spread.items():
-  print("Your {key} is the {value} card.".format(key=key, value=value))
+  if value[:3] == "The":
+    print("Your {key} is {value} card.".format(key=key, value=value))
+  else:
+    print("Your {key} is the {value} card.".format(key=key, value=value))
