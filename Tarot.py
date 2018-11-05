@@ -1,3 +1,5 @@
+import random
+
 #Dictionary with the card values as keys and their names
 tarot = { 1:	"The Magician", 2:	"The High Priestess", 3:	"The Empress", 4:	"The Emperor",
  5:	"The Hierophant", 6:	"The Lovers", 7:	"The Chariot", 8:	"Strength", 9:	"The Hermit",
@@ -9,9 +11,9 @@ tarot = { 1:	"The Magician", 2:	"The High Priestess", 3:	"The Empress", 4:	"The 
 Each card pulled will pop it from the deck.
 Still needs to upgrade it to some kind of random"""
 spread = {}
-spread["past"] = tarot.pop(7)
-spread["present"] = tarot.pop(20)
-spread["future"] = tarot.pop(11)
+spread["past"] = tarot.pop(random.randint(1, 22))
+spread["present"] = tarot.pop(random.randint(1, 22))
+spread["future"] = tarot.pop(random.randint(1, 22))
 
 for key, value in spread.items():
   print("Your {key} is the {value} card.".format(key=key, value=value))
