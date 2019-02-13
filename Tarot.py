@@ -11,6 +11,8 @@ spread["past"] = tarot.pop(random.randint(1, 22))
 spread["present"] = tarot.pop(random.randint(1, 22))
 spread["future"] = tarot.pop(random.randint(1, 22))
 
+#print(spread)
+
 #Printing the spread cards. If the name of the card starts with "The", the output do not include the
 #word "the" and use what comes in the card name.
 for key, value in spread.items():
